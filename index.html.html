@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Brackets</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+</head>
+
+<body class="bg-dark text-white ">
+  <header class="bg-secondary text-center p-3 mb-5">
+    <h1>Brackets</h1>
+    <!-- Title of the User's Bracket-->   
+    <h3 id="title-message">My Bracket</h3>
+    <!-- Number of the items in the User's Bracket-->   
+    <h4 id="number-message">4 Items</h4>
+  </header>
+    <div class="container text-center">
+
+        <!-- Title input-->
+        <div class="row">
+            <p class="lead">Type The Title.</p>
+            <input type="text" class="form-control form-control-lg" placeholder="My Bracket" id="title-input" >
+        </div>    
+        
+        <!-- Number input-->
+        <!-- Will likely phase this part out in favour of a multiple of 4 check and less than 64-->
+        <div class="row">
+            <label for="number-input">Choose the Bracket Size.</label>
+            <select class="form-control form-control-lg" id="number-input" >   
+                <option value = 4> 4 </option>
+                <option value = 8> 8 </option>
+                <option value = 16> 16 </option>
+                <option value = 32> 32 </option>
+                <option value = 64> 64 </option>
+            </select>
+
+        </div>
+
+        <!-- Item input-->
+        <div id="inputs" class="row">
+            <p class="lead">Type The Items.</p>
+            <input class="form-control form-control-lg" placeholder="item" id="item-input">
+            <button style="background-color: burlywood;" type="button" id="item-add">Add to Bracket</button>
+            <button style="background-color: burlywood;" type="button" id="submit-bracket">Submit Bracket</button>
+            <button style="background-color: burlywood;" type="button" id="edit-bracket">Edit Bracket</button>
+            <button style="background-color: burlywood;" type="button" id="reset-bracket">Reset Bracket</button>
+            <h4>The Contenders Are: </h4> &nbsp;
+            <h4 id="item-message"></h4>
+        </div>
+
+        <div id="edit" class= "row" style="display: none;"> 
+          <textarea name="Bracket Items" id="edits" cols="30" rows="8"> </textarea>
+          <button style="background-color: burlywood;" type="button" id="save-edits">Save Edits</button>
+        </div>
+    </div>
+  <script src="./BracketsInput.js"></script>
+
+
+</body>
+
+</html>
